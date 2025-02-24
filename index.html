@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmeRadar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image Container -->
+        <div class="image-container">
+            <img id="sliderImage" src="" alt="Weather Image">
+        </div>
+        <!-- Time Display -->
+        <div id="timeDisplay" class="time-display">yyyy년 m월 d일 hh시 mm분</div>
+        <!-- Time Slider -->
+        <div class="slider-wrapper">
+            <div class="slider-container">
+                <input type="range" min="1" max="24" value="1" class="slider" id="timeSlider">
+            </div>
+        </div>
+        <!-- Speed Controls -->
+        <div class="speed-controls">
+            <button id="fasterButton">빠르게</button>
+            <div id="speedDisplayContainer">0.5 s/frame</div>
+            <button id="slowerButton">느리게</button>
+            <button id="playPauseButton">정지</button>
+        </div>
+        <!-- Region Select Container -->
+        <div class="region-refresh-container">
+            <div class="slider-container">
+                <label for="regionSelect">지역:</label>
+                <select id="regionSelect">
+                    <option value="nationwide">전국[4시간]</option>
+                    <option value="seoul">수도권[2시간]</option>
+                    <option value="chungcheong">충청권[2시간]</option>
+                    <option value="honam">호남권[2시간]</option>
+                    <option value="gyeongnam">경남권[2시간]</option>
+                    <option value="gyeongbuk">경북권[2시간]</option>
+                    <option value="gangwon">강원권[2시간]</option>
+                    <option value="jeju">제주권[2시간]</option>
+                    <option value="eastAsia">동아시아 광역[24시간]</option>
+                </select>
+                <label for="centerCheckbox">동심원:</label>
+                <input type="checkbox" id="centerCheckbox">
+                <label for="windVectorCheckbox">바람벡터:</label>
+                <input type="checkbox" id="windVectorCheckbox">
+            </div>
+            <div class="refresh-container">
+                <span id="lastRefresh">새로고침: </span>
+            </div>
+        </div>
+        <!-- Source Container -->
+        <div class="source-container">
+            <div class="source-wrapper">
+                <img src="https://www.weather.go.kr/w/resources/image/mark03_22.png" alt="공공누리 제2유형" class="public-domain-image">
+                <span id="sourceText">출처: 기상청</span>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+/* Reset margins and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+}
+
+/* General container styles */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container styles */
+.image-container {
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#sliderImage {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+}
+
+/* Time display styles */
+.time-display {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Slider wrapper styles */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.slider-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 10px;
+}
+
+#timeSlider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #3a3a3a;
+    border-radius: 5px;
+    height: 8px;
+    outline: none;
+}
+
+#timeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+#timeSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+/* Speed controls styles */
+.speed-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#speedDisplayContainer {
+    width: 120px;
+    text-align: center;
+    border: 1px solid #3a3a3a;
+    padding: 0 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ffffff;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+    background-color: #007bff;
+}
+
+/* Region select styles */
+.region-refresh-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+}
+
+/* Drop box container styles */
+.dropbox-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#regionSelect {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+#regionSelect:focus {
+    border-color: #007bff;
+}
+
+#centerCheckbox,
+#windVectorCheckbox {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Adjust styles for labels */
+.slider-container label {
+    margin-right: 5px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent labels from wrapping */
+}
+
+/* Refresh container styles */
+.refresh-container {
+    text-align: right;
+    font-size: 12px;
+    color: gray;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow text */
+    width: 100%; /* Ensure full width usage */
+}
+
+/* Source container styles */
+.source-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-end; /* Align content to the right */
+    gap: 10px; /* Space between image and text */
+}
+
+.source-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.public-domain-image {
+    width: 150px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+#sourceText {
+    font-size: 12px;
+    color: gray;
+    margin-top: 2px; /* Space between image and text */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #sliderImage {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .slider-wrapper {
+        max-width: 100%;
+        margin: 10px 0; /* Adjusted margin for mobile */
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .dropbox-container {
+        width: 100%;
+    }
+
+    .time-display {
+        margin: 5px 0; /* Adjusted margin for mobile */
+    }
+
+    .refresh-container {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 10px; /* Adjust font size for mobile */
+    }
+
+    .region-refresh-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .source-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .public-domain-image {
+        margin-bottom: 10px; /* Space between image and text for mobile */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding for mobile */
+        font-size: 12px; /* Adjust button font size for mobile */
+    }
+
+    #speedDisplayContainer {
+        font-size: 12px; /* Adjust font size for mobile */
+        height: 35px; /* Adjust height for mobile */
+        width: 100px; /* Adjust width for mobile */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+
+    .dropbox-container {
+        width: 90%;
+    }
+
+    .speed-controls {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    #speedDisplayContainer {
+        width: 140px;
+        font-size: 16px;
+    }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 1025px) {
+    .container {
+        padding: 30px;
+    }
+
+    .slider-container {
+        width: 80%;
+    }
+
+    .dropbox-container {
+        width: 80%;
+    }
+
+    .speed-controls {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #speedDisplayContainer {
+        width: 160px;
+        font-size: 18px;
+    }
+}
