@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     async function getInternetTime() {
-        const response = await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FSeoul');
-        const data = await response.json();
-        return new Date(data.datetime);
-    }
+    const response = await fetch('https://timeapi.io/api/Time/current/zone?timeZone=Asia/Seoul');
+    const data = await response.json();
+    return new Date(data.dateTime);
+}
 
     function formatDate(date, type = "url") {
         const y = date.getFullYear();
